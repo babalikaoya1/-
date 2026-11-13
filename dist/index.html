@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#edf1e8">
-  <meta name="description" content="与无限、小黑一起穿越黑洞，救出东东。长按蓄力，松手出发。没关系，慢慢来。">
+  <meta name="description" content="与无限、小黑一起穿越黑洞，救出冬冬。长按蓄力，松手出发。没关系，慢慢来。">
   <title>小黑与无限 · 黑洞救援</title>
   <link rel="icon" href="图标.svg" type="image/svg+xml">
   <link rel="stylesheet" href="样式.css">
@@ -15,7 +15,7 @@
       <a class="标识" href="./" aria-label="小黑与无限首页"><img src="图标.svg" alt="" width="38" height="38"><span>小黑与无限<span class="标识副题">一场温柔的救援</span></span></a>
       <div class="介绍正文">
         <span class="章节"><i></i> 黑洞救援 · 小小冒险</span>
-        <h1>穿过黑洞，<br>把东东<span>带回家。</span></h1>
+        <h1>穿过黑洞，<br>把冬冬<span>带回家。</span></h1>
         <p class="引言">小黑趴在肩头，前路就在脚下。<br>和无限一起，慢慢靠近那个<br>等待被拥抱的小小身影。</p>
         <div class="旅途线"><span>出发</span><i></i><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5 19C5 7 17 5 22 4c0 12-5 17-13 16M8 19l10-10"/></svg><i></i><span>团聚</span></div>
         <blockquote>“没关系，慢慢来。”<small>每一次落空，都有人接住你。</small></blockquote>
@@ -27,23 +27,23 @@
       <div class="游戏框" id="游戏框">
         <canvas id="画布" tabindex="0" aria-label="游戏画面，按住屏幕或空格蓄力，松开穿越到下一平台"></canvas>
         <div class="游戏顶栏">
-          <div class="分数区"><span class="小标题">旅途分数</span><div><strong id="分数">0</strong><span class="总分">/ 300</span></div><span class="连击" id="连击">每一步，都离东东更近</span></div>
-          <div class="顶栏右"><div class="按钮行"><button class="图标按钮" id="声音" aria-label="关闭语音" title="关闭语音"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg></button><button class="图标按钮" id="暂停" aria-label="暂停游戏" title="暂停游戏" disabled><svg viewBox="0 0 24 24"><path d="M8 6v12M16 6v12"/></svg></button></div><span class="旅途标签"><i></i><span id="旅途标签">东东在终点等你</span></span></div>
+          <div class="分数区"><span class="小标题">旅途分数</span><div><strong id="分数">0</strong><span class="总分">/ 300</span></div><span class="连击" id="连击">每一步，都离冬冬更近</span></div>
+          <div class="顶栏右"><div class="按钮行"><button class="图标按钮" id="声音" aria-label="关闭语音" title="关闭语音"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg></button><button class="图标按钮" id="暂停" aria-label="暂停游戏" title="暂停游戏" disabled><svg viewBox="0 0 24 24"><path d="M8 6v12M16 6v12"/></svg></button></div><span class="旅途标签"><i></i><span id="旅途标签">冬冬在终点等你</span></span></div>
         </div>
         <div class="路程" aria-label="救援进度"><div id="进度"></div><span></span></div>
         <div class="对白" id="对白" role="status" aria-live="polite" hidden><span class="对白署名">无限</span><span id="对白文字">没关系，慢慢来</span></div>
         <div class="得分提示" id="得分提示" aria-live="polite"></div>
         <div class="操作提示" id="操作提示" hidden><div class="蓄力条"><div id="蓄力填充"></div></div><p id="操作文字">按住蓄力 <span>·</span> 松手穿越</p><small>按得越久，穿越得越远</small></div>
         <section class="启程面板" id="启程面板" aria-label="开始冒险">
-          <span class="面板眉题">小黑，出发吧。</span><h2>东东还在等我们</h2><p>按住蓄力，松手穿越。<br>就算落空，无限也会稳稳接住你。</p>
+          <span class="面板眉题">小黑，出发吧。</span><h2>冬冬还在等我们</h2><p>按住蓄力，松手穿越。<br>就算落空，无限也会稳稳接住你。</p>
           <button class="主按钮" id="开始" disabled>正在准备旅途…<span>↗</span></button>
           <small class="键盘提示">触屏 · 鼠标 · 空格，任选一种出发</small>
         </section>
         <div class="遮罩" id="暂停层" hidden><section class="暂停卡"><span class="面板眉题">歇一歇，也没关系</span><h2>等你一起出发</h2><button class="主按钮" id="继续">继续旅途 <span>↗</span></button><button class="文字按钮" id="重新开始">从头出发</button></section></div>
-        <div class="遮罩 结局层" id="结局层" hidden><section class="结局卡"><span class="面板眉题">终于，找到你了</span><h2>救援成功</h2><p>魂灵完好，灵质稳定。<br>东东，我们回家。</p><img id="结局人物" src="人物/救援成功.png" alt="无限抱着东东，小黑仍趴在无限肩上"><div class="结局分数">300 <span>分 · 平安抵达</span></div><button class="主按钮" id="再玩">再陪他们走一程 <span>↗</span></button></section></div>
+        <div class="遮罩 结局层" id="结局层" hidden><section class="结局卡"><span class="面板眉题">终于，找到你了</span><h2>救援成功</h2><p>魂灵完好，灵质稳定。<br>冬冬，我们回家。</p><img id="结局人物" src="人物/救援成功.png" alt="无限抱着冬冬，小黑仍趴在无限肩上"><div class="结局分数">300 <span>分 · 平安抵达</span></div><button class="主按钮" id="再玩">再陪他们走一程 <span>↗</span></button></section></div>
         <p class="加载错误" id="加载错误" role="alert" hidden>人物素材加载失败，请检查网络后刷新页面。</p>
       </div>
-      <div class="游戏脚注"><span><i></i> 有无限在，不用怕落空</span><span>抵达 300 分 · 救出东东</span></div>
+      <div class="游戏脚注"><span><i></i> 有无限在，不用怕落空</span><span>抵达 300 分 · 救出冬冬</span></div>
     </main>
   </div>
   <script type="module" src="游戏.mjs"></script>

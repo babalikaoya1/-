@@ -76,7 +76,7 @@ with sync_playwright() as 自动化:
                 break
             穿越()
         assert 状态()['分数'] == 299 and 状态()['目标终点'], f'终点尚未抵达：{状态()}'
-        页面.screenshot(path=str(输出目录 / '东东终点.png'))
+        页面.screenshot(path=str(输出目录 / '冬冬终点.png'))
         穿越(1)
         assert 状态()['分数'] == 299 and 状态()['阶段'] == '待机' and 状态()['目标终点']
         print('通过：真实操作抵达299分，终点落空保护不误通关', flush=True)
