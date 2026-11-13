@@ -1,0 +1,8 @@
+tmp/
+node_modules/
+.sites-runtime/
+.sites-checkout/
+__pycache__/
+验收输出/
+outputs/
+*.tar.gz
